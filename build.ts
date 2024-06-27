@@ -56,6 +56,7 @@ firefoxZip.addFile('manifest.json', Buffer.from(JSON.stringify({
     'content.js'
   ]
 }, null, 2)))
+// Firefox linter fails the ZIp with "Invalid file name in archive: icons\icon128.png", so i need to manually zip for some reason
 for (const image of ['icon16.png', 'icon32.png', 'icon48.png', 'icon128.png'])
   firefoxZip.addFile(`icons/${image}`, Buffer.from(await Bun.file(`./icons/${image}`).arrayBuffer()));
 firefoxZip.writeZip('./dist/TweetDiff-firefox.zip');
