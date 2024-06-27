@@ -30,7 +30,7 @@ await Bun.write('./dist/TweetDiff.user.js', userScript);
 
 // Chrome Zip
 const chromeZip = new AdmZip();
-chromeZip.addFile('script.js', Buffer.from(script, 'utf8'));
+chromeZip.addFile('content.js', Buffer.from(script, 'utf8'));
 chromeZip.addFile('manifest.json', Buffer.from(JSON.stringify({ ...manifest, version }, null, 2)))
 for (const image of ['icon16.png', 'icon32.png', 'icon48.png', 'icon128.png'])
   chromeZip.addFile(`icons/${image}`, Buffer.from(await Bun.file(`./icons/${image}`).arrayBuffer()));
@@ -38,7 +38,7 @@ chromeZip.writeZip('./dist/TweetDiff-chrome.zip');
 
 // Firefox Zip
 const firefoxZip = new AdmZip();
-firefoxZip.addFile('script.js', Buffer.from(script, 'utf8'));
+firefoxZip.addFile('content.js', Buffer.from(script, 'utf8'));
 firefoxZip.addFile('manifest.json', Buffer.from(JSON.stringify({
   ...manifest,
   version,

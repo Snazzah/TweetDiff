@@ -1,0 +1,1 @@
+This extension does not collect or sell information on it's users. Thanks Google.
