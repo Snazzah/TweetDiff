@@ -6,6 +6,7 @@
     "start": "bun run src/index.ts",
     "build": "bun run build.ts"
   },
+  "license": "MIT",
   "type": "module",
   "devDependencies": {
     "@types/adm-zip": "^0.5.5",

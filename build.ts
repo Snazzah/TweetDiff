@@ -16,8 +16,9 @@ const userScript = `// ==UserScript==
 // @version      ${version}
 // @description  Diff checker on tweet edit history
 // @author       Snazzah
+// @license      MIT
 // @match        https://x.com/*
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @icon         https://raw.githubusercontent.com/Snazzah/TweetDiff/v${version}/icons/icon128.png
 // @grant        none
 // ==/UserScript==
 
