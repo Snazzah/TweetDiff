@@ -1,0 +1,20 @@
+{
+  "name": "tweetdiff",
+  "module": "src/index.ts",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "build": "bun run build.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.5",
+    "@types/bun": "latest",
+    "@types/diff": "^5.2.1",
+    "adm-zip": "^0.5.14",
+    "diff": "^5.2.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

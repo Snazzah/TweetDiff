@@ -1,0 +1,188 @@
+body {
+  --twdiff-background-color: 255, 255, 255;
+  --twdiff-text-color: rgb(0, 0, 0);
+}
+body[style^="background-color: rgb(21, 32, 43);"], body.body-dark {
+  --twdiff-background-color: 21, 32, 43;
+  --twdiff-text-color: rgb(255, 255, 255);
+}
+body[style^="background-color: rgb(0, 0, 0);"], body.body-pitch-black {
+  --twdiff-background-color: 0, 0, 0;
+  --twdiff-text-color: rgb(255, 255, 255);
+}
+
+.twdiff-button {
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid rgb(47, 51, 54);
+  background-color: transparent;
+  margin-top: 10px;
+  padding: 10px 15px;
+  display: flex;
+  font-size: 15px;
+  gap: 2px;
+  color: #d8dbde;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+.twdiff-button:hover {
+  background-color: rgb(255, 255, 255, 0.03);
+}
+
+.twdiff-add-preview {
+  color: #57ab5a;
+  font-weight: 700;
+}
+
+.twdiff-remove-preview {
+  color: #e5534b;
+  font-weight: 700;
+}
+
+.twdiff-modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(91, 112, 131, 0.4);
+  color: var(--twdiff-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twdiff-inner-modal {
+  position: relative;
+  background-color: rgb(var(--twdiff-background-color));
+  border-radius: 8px;
+  max-width: 600px;
+  max-height: 650px;
+  width: 100%;
+  margin: 10px;
+  overflow: auto;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.twdiff-header {
+  height: 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
+  font-size: 20px;
+  align-content: center;
+  font-weight: 700;
+  backdrop-filter: blur(12px);
+  background-color: rgba(var(--twdiff-background-color), 0.65);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.twdiff-header h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 20px;
+}
+
+.twdiff-header > .twdiff-remove-preview {
+  margin-left: 4px;
+}
+
+.twdiff-close-button {
+  color: rgb(239, 243, 244);
+  background-color: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 999px;
+  transition-duration: 0.2s;
+  margin-left: -8px;
+  margin-right: 20px;
+}
+
+.twdiff-close-button:hover {
+  background-color: rgba(239, 243, 244, 0.1);
+}
+
+.twdiff-close-button svg {
+  fill: currentColor;
+}
+
+.twdiff-close-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.twdiff-tweet {
+  padding: 12px 16px;
+  padding-bottom: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+.twdiff-tweet-avy {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.twdiff-tweet-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  gap: 2px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.twdiff-tweet-user {
+  font-weight: 700;
+  display: flex;
+  gap: 2px;
+}
+
+.twdiff-user-verified {
+  color: rgb(29, 155, 240);
+  height: 1.25em;
+  fill: currentcolor;
+  max-width: 20px;
+  max-height: 20px;
+  height: 1.25em;
+  vertical-align: text-bottom;
+}
+
+.twdiff-tweet-handle {
+  color: rgb(113, 118, 123);
+  font-weight: 400;
+}
+
+.twdiff-tweet-text {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.twdiff-add {
+  background-color: #0a04;
+}
+
+.twdiff-remove {
+  background-color: #a004;
+  text-decoration: line-through;
+}
